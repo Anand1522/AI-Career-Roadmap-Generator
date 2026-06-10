@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚀 AI Career Roadmap Generator</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+}
+
+.container{
+    width:650px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    color:#38bdf8;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border-radius:8px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.result{
+    margin-top:20px;
+    background:#0f172a;
+    padding:15px;
+    border-radius:10px;
+}
+
+ul{
+    margin-top:5px;
+}
+
+h3{
+    color:#22c55e;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🚀 AI Career Roadmap Generator</h2>
+
+<select id="career">
+
+<option value="">Select Career Goal</option>
+
+<option value="fullstack">Full Stack Developer</option>
+
+<option value="datasanalyst">Data Analyst</option>
+
+<option value="datascientist">Data Scientist</option>
+
+<option value="aiengineer">AI Engineer</option>
+
+<!-- <option value="fullstack">Full Stack Developer</option> -->
+
+<!-- <option value="datasanalyst">Data Analyst</option> -->
+
+<option value="cloud">Cloud Engineer</option>
+
+<option value="cybersecurity">Cyber Security Analyst</option>
+
+<!-- <option value="cloud">Cloud Engineer</option> -->
+
+</select>
+
+<button onclick="generateRoadmap()">
+Generate Roadmap
+</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+<script>
+
+function generateRoadmap(){
+
+let career=document.getElementById("career").value;
+
+let output="";
+
+if(career==="datascientist"){
+
+output=`
+<h3>Career Goal: Data Scientist</h3>
+
+<p><b>Skills to Learn:</b></p>
+
+<ul>
+<li>Python</li>
+<li>Statistics</li>
+<li>SQL</li>
+<li>Pandas</li>
+<li>NumPy</li>
+<li>Machine Learning</li>
+<li>Deep Learning</li>
+<li>Data Visualization</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Sales Prediction</li>
+<li>Resume Analyzer</li>
+<li>Movie Recommendation System</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 6–12 Months</p>
+`;
+
+}
+
+else if(career==="aiengineer"){
+
+output=`
+<h3>Career Goal: AI Engineer</h3>
+
+<ul>
+<li>Python</li>
+<li>Machine Learning</li>
+<li>Deep Learning</li>
+<li>TensorFlow</li>
+<li>PyTorch</li>
+<li>LLMs</li>
+<li>Generative AI</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Chatbot</li>
+<li>AI Assistant</li>
+<li>Image Generator</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 8–14 Months</p>
+`;
+
+}
+
+else if(career==="fullstack"){
+
+output=`
+<h3>Career Goal: Full Stack Developer</h3>
+
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>Git & GitHub</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Portfolio Website</li>
+<li>E-Commerce Website</li>
+<li>Task Manager</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 6–10 Months</p>
+`;
+
+}
+
+else if(career==="datasanalyst"){
+
+output=`
+<h3>Career Goal: Data Analyst</h3>
+
+<ul>
+<li>Excel</li>
+<li>SQL</li>
+<li>Power BI</li>
+<li>Tableau</li>
+<li>Python</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Sales Dashboard</li>
+<li>Business Analytics Dashboard</li>
+<li>Data Cleaning Project</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 4–8 Months</p>
+`;
+
+}
+
+else if(career==="cybersecurity"){
+
+output=`
+<h3>Career Goal: Cyber Security Analyst</h3>
+
+<ul>
+<li>Networking</li>
+<li>Linux</li>
+<li>Ethical Hacking</li>
+<li>SIEM Tools</li>
+<li>Security Testing</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Vulnerability Scanner</li>
+<li>Password Strength Checker</li>
+<li>Security Audit Tool</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 6–12 Months</p>
+`;
+
+}
+
+else if(career==="cloud"){
+
+output=`
+<h3>Career Goal: Cloud Engineer</h3>
+
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>Linux</li>
+</ul>
+
+<p><b>Projects:</b></p>
+
+<ul>
+<li>Cloud Deployment</li>
+<li>Dockerized App</li>
+<li>AWS Hosting Project</li>
+</ul>
+
+<p><b>Estimated Timeline:</b> 6–12 Months</p>
+`;
+
+}
+
+else{
+
+output=`
+<h3>Please Select a Career Goal</h3>
+`;
+
+}
+
+document.getElementById("result").innerHTML=output;
+
+}
+
+</script>
+
+</body>
+</html>
